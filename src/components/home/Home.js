@@ -33,7 +33,7 @@ class Home extends Component {
         <ActionContainer>
           <Action 
           onClick={() => this.goTo('/forms')}
-          color='#ffdb5e'
+          color='#f4af31'
           >
             Preencher Formulário
           </Action>

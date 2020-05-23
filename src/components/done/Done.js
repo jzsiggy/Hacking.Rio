@@ -26,14 +26,14 @@ class Done extends Component {
           <ThankYou>
             <Blue>Obrigado</Blue>&nbsp;
             <Brown>por preencher nosso</Brown>&nbsp;
-            <Yellow>cadastro</Yellow>
+            <Yellow>formulário</Yellow>
             <Brown>.</Brown>
           </ThankYou>
         </TextContainer>
         <ActionContainer>
           <Action 
           onClick={() => this.goTo('/')}
-          color='#ffdb5e'
+          color='#f4af31'
           >
             Voltar para Página Inicial
           </Action>
