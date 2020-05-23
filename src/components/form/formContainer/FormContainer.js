@@ -4,10 +4,10 @@ import AppContext from '../../../appContext/AppContext';
 import { withRouter } from 'react-router-dom';
 
 import NameStep from '../steps/NameStep';
-import EmailStep from '../steps/EmailStep';
+import CPFStep from '../steps/CPFStep';
 import AgeStep from '../steps/AgeStep';
-import InterestStep from '../steps/InterestStep';
-import PasswordStep from '../steps/PasswordStep';
+import CovidSymptomStep from '../steps/CovidSymptomStep';
+import CancerSymptomStep from '../steps/CancerSymptomStep';
 
 class FormContainer extends Component {
   constructor(props) {
@@ -62,14 +62,6 @@ class FormContainer extends Component {
   render() {
     return(
       <Container>
-        <div style={{
-          'display':'flex',
-          'flexDirection':'column',
-          'justifyContent':'space-between',
-          'height':'30%'
-        }}
-        >
-
         {
         this.context.state.step === 1 &&
         <NameStep 
@@ -79,7 +71,7 @@ class FormContainer extends Component {
         }
         {
         this.context.state.step === 2 &&
-        <EmailStep 
+        <CPFStep 
         fadingOut={this.state.fadingOut}
         handleChange={this.handleChange}
         />
@@ -93,28 +85,21 @@ class FormContainer extends Component {
         }
         {
         this.context.state.step === 4 &&
-        <InterestStep 
+        <CovidSymptomStep 
         fadingOut={this.state.fadingOut}
-        handleChange={this.handleChange}
         />
         }
         {
         this.context.state.step === 5 &&
-        <PasswordStep 
+        <CancerSymptomStep 
         fadingOut={this.state.fadingOut}
-        handleChange={this.handleChange}
         />
         }
 
-        {
-          this.context.state.step >= 1 && this.context.state.step <= 5 &&
-          <NavContainer>
-            <Back onClick={this.prevStep}>🔙</Back>
-            <Next onClick={this.nextStep}>👍</Next>
-          </NavContainer>
-        }
-        
-        </div>
+        <NavContainer>
+          <Back onClick={this.prevStep}>🔙</Back>
+          <Next onClick={this.nextStep}>👍</Next>
+        </NavContainer>
       </Container>
     )
   }

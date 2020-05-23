@@ -53,7 +53,7 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100%;
+  height: 85%;
   width: 80vw;
   ${props => props.fadingOut && css`
     opacity: 0;
@@ -68,7 +68,7 @@ const Question = styled.div`
 `
 
 const Input = styled.input`
-  border: 1px solid #FFDB5E;
+  border: 1px solid #f4af31;
   height: 40px !important;
   width: 100%;
 
