@@ -5,12 +5,11 @@ class AppProvider extends Component {
   constructor (props) {
     super(props)
     this.state = {
-      step: 1,
-      email: '',
+      step: 4,
+      cpf: '',
       name: '',
-      password: '',
       age: '',
-      interests: [],   
+      symptoms: [],   
     };
   };
 
@@ -32,12 +31,24 @@ class AppProvider extends Component {
     this.setState(newState)
   };
 
+  manageSymptom = (name) => {
+    let newState = {...this.state};
+    const index = newState.symptoms.indexOf(name);
+    if (index != -1) {
+      newState.symptoms.splice(index, 1);
+    } else {
+      newState.symptoms.push(name);
+    }
+    this.setState(newState)
+  }
+
   render () {
     const contextValues = {
       state : this.state,
       nextStep : this.nextStep,
       prevStep : this.prevStep,
       changeState : this.changeState,
+      manageSymptom : this.manageSymptom,
     };
     
     return (
