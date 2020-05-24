@@ -20,10 +20,9 @@ class CancerSymptomStep extends Component {
           { name: 'Dor de Barriga',             id: 'dorBarriga' },
           { name: 'Sangue na Urina',            id: 'sangueUrina' },
           { name: 'Pupila Esbranquiçada',       id: 'pupilaBranca' },
-          { name: 'Perda de Peso',             id: 'perdaPeso' },
+          { name: 'Perda de Peso',              id: 'perdaPeso' },
           { name: 'Inchaço',                    id: 'inchaco' },
           { name: 'Pele Vermelha',              id: 'peleVermelha' },
-
         ]}
         />
       </Container>

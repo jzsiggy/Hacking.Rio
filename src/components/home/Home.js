@@ -25,8 +25,8 @@ class Home extends Component {
         <LogoContainer>
           <Logo />
           <LogoText>
-            <Blue>True</Blue>&nbsp;
-            <Brown>Space</Brown>
+            <Blue>Help</Blue>&nbsp;
+            <Brown>Health</Brown>
             <Yellow>.</Yellow>
           </LogoText>
         </LogoContainer>

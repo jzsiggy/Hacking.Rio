@@ -39,6 +39,12 @@ const ThankYou = styled.span`
   text-align: center;
 `
 
+const Verification = styled.div`
+  height: 10%;
+  text-align: center;
+  width: 75%;
+`
+
 const ActionContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -70,4 +76,5 @@ export {
   ThankYou,
   ActionContainer,
   Action,
+  Verification,
 }

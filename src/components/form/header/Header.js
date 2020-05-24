@@ -7,8 +7,8 @@ class Header extends Component {
     return(
       <Container>
         <Logo>
-          <Blue>True</Blue>&nbsp;
-          <Brown>Space</Brown>
+          <Blue>Help</Blue>&nbsp;
+          <Brown>Health</Brown>
           <Yellow>.</Yellow>
         </Logo>
         <Blob />

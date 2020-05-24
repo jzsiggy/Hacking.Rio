@@ -5,7 +5,7 @@ class AppProvider extends Component {
   constructor (props) {
     super(props)
     this.state = {
-      step: 4,
+      step: 1,
       cpf: '',
       name: '',
       age: '',

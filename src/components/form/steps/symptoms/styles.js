@@ -35,6 +35,7 @@ const S = styled.div`
     background-color: #6fbfc1;
     color: #fff;
   `}
+  cursor: pointer;
 `
 
 export {

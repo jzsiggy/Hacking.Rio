@@ -1,4 +1,6 @@
 import React , { Component } from 'react';
+import Axios from 'axios';
+
 import { Container , NavContainer , Next , Back} from './styles';
 import AppContext from '../../../appContext/AppContext';
 import { withRouter } from 'react-router-dom';
@@ -8,6 +10,8 @@ import CPFStep from '../steps/CPFStep';
 import AgeStep from '../steps/AgeStep';
 import CovidSymptomStep from '../steps/CovidSymptomStep';
 import CancerSymptomStep from '../steps/CancerSymptomStep';
+import CancerSymptom2Step from '../steps/CancerSymptom2Step';
+
 
 class FormContainer extends Component {
   constructor(props) {
@@ -29,15 +33,29 @@ class FormContainer extends Component {
     })
 
     setTimeout(() => {
-      if (this.context.state.step >= 5) {
+      if (this.context.state.step >= 6) {  
+        let body = {
+          nome: this.context.state.name,
+          idade: parseFloat(this.context.state.age),
+          cpf: this.context.state.cpf,
+          sintomas: this.context.state.symptoms,
+        }
+        console.log(body);
+        Axios.post('https://polar-inlet-24420.herokuapp.com/preencher', body)
+        .then(response => {
+          console.log(response);
+        })
+        .catch(err => {
+          console.log(err)
+        })
         this.props.history.push('/done');
-        return
       }
-
-      this.context.nextStep()
-      this.setState({
-        fadingOut: false,
-      })
+      else {
+        this.context.nextStep()
+        this.setState({
+          fadingOut: false,
+        })
+      }
     }, 300)
   }
 
@@ -92,6 +110,12 @@ class FormContainer extends Component {
         {
         this.context.state.step === 5 &&
         <CancerSymptomStep 
+        fadingOut={this.state.fadingOut}
+        />
+        }
+        {
+        this.context.state.step === 6 &&
+        <CancerSymptom2Step 
         fadingOut={this.state.fadingOut}
         />
         }

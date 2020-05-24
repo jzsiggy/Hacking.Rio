@@ -1,7 +1,7 @@
 import React , { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 
-import { Container , TextContainer , ThankYou , ActionContainer , Action } from './styles';
+import { Container , TextContainer , ThankYou , ActionContainer , Action, Verification } from './styles';
 import { Blue, Brown, Yellow } from '../colors';
 
 class Done extends Component {
@@ -30,6 +30,9 @@ class Done extends Component {
             <Brown>.</Brown>
           </ThankYou>
         </TextContainer>
+        <Verification>
+          Os seus dados foram armazenados no nosso banco!
+        </Verification>
         <ActionContainer>
           <Action 
           onClick={() => this.goTo('/')}

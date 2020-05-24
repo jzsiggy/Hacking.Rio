@@ -22,7 +22,7 @@ class CovidSymptomStep extends Component {
           { name: 'Tosse',                    id: 'tosse' },
           { name: 'Dor de Cabeça',            id: 'dorCabeca' },
           { name: 'Nariz Escorrendo',         id: 'coriza' },
-          { name: 'Cansaço',                  id: 'cansaco' },
+          { name: 'Cansaço',                  id: 'fadiga' },
           { name: 'Diarreia',                 id: 'diarreia' },
           { name: 'Dificuldade em Respirar',  id: 'difResp' }
         ]}
