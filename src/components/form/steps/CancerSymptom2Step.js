@@ -12,7 +12,11 @@ class CancerSymptom2Step extends Component {
           <Brown>Você</Brown>&nbsp;
           <Blue>sentiu</Blue>&nbsp;
           <Brown>algum desses</Brown>&nbsp;
-          <Yellow>sintomas</Yellow>&emsp;
+          <Yellow>sintomas</Yellow>&nbsp;
+          {
+            window.innerWidth < 400 &&
+            <br />
+          }
           <Brown>recentemente?</Brown>
         </Question>
         <Symptoms 
@@ -25,7 +29,6 @@ class CancerSymptom2Step extends Component {
           { name: 'Olho Amarelado',          id: 'olhoAmarelo' },
           { name: 'Dor no Abdómen',          id: 'dorAbdomem' },
           { name: 'Dor de Ouvido',           id: 'dorOuvido' },
-
         ]}
         />
       </Container>
