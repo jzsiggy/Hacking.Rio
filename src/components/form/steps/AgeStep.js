@@ -35,7 +35,7 @@ class AgeStep extends Component {
       >
         <option aria-label="None" value="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
         {
-          [...Array(100).keys()].map(num => {
+          [...Array(19).keys()].map(num => {
             return(
               <option value={num} key={num}>{num}</option>
             )
